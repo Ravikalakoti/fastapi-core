@@ -1,4 +1,4 @@
-# FastAPI Beginner Project 🚀
+# FastAPI Beginner Project 
 
 This is my first FastAPI project for learning and practice. It includes user authentication, database operations with SQLite, and follows an industry-standard project structure.
 
@@ -9,6 +9,38 @@ This is my first FastAPI project for learning and practice. It includes user aut
 - Database Integration with SQLAlchemy & SQLite 🛢️
 - FastAPI's built-in interactive API docs 📄 (`/docs`)
 
-## 📂 Project Structure:
-fastapi_project/ │── app/ │ ├── api/ │ │ ├── routes/ │ │ │ ├── auth.py # Authentication routes (login, register) │ │ │ ├── users.py # User-related API routes │ │ ├── dependencies.py # Common dependencies │ ├── core/ │ │ ├── config.py # App configurations │ │ ├── security.py # JWT token and password hashing │ ├── models/ │ │ ├── user.py # SQLAlchemy User model │ ├── schemas/ │ │ ├── user.py # Pydantic User schemas │ ├── services/ │ │ ├── user_service.py # Business logic for user management │ ├── db/ │ │ ├── database.py # Database connection │ ├── main.py # FastAPI app entry point │── tests/ │ ├── test_auth.py # Authentication tests │── .env # Environment variables │── requirements.txt # Python dependencies │── README.md # Project documentation │── run.sh # Script to start the app │── .gitignore # Files to ignore in Git
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+git clone https://github.com/Ravikalakoti/fastapi-beginner-project.git
+cd fastapi-project
+
+### 2️⃣ Create and Activate Virtual Environment
+python -m venv venv
+source venv/bin/activate  # On Windows, use venv\Scripts\activate
+
+### 3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+### 4️⃣ Set Up Environment Variables
+Create a .env file in the root directory and add the following:
+
+SECRET_KEY="your_secret_key_here"
+ALGORITHM="HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+DATABASE_URL="sqlite:///./app.db"
+
+### 5️⃣ Run Database Migrations (if using SQLAlchemy)
+alembic upgrade head
+
+### 6️⃣ Run the FastAPI Application
+uvicorn app.main:app --reload
+
+Your API will be available at http://127.0.0.1:8000
+API documentation can be accessed at:
+Swagger UI: http://127.0.0.1:8000/docs
+Redoc: http://127.0.0.1:8000/redoc
+
 
