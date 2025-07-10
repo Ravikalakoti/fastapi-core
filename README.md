@@ -13,7 +13,7 @@ This is my first FastAPI project for learning and practice. It includes user aut
 ## 🛠️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/Ravikalakoti/fastapi-beginner-project.git
+https://github.com/Ravikalakoti/fastapi-core.git
 cd fastapi-project
 
 ### 2️⃣ Create and Activate Virtual Environment
